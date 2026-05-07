@@ -6,7 +6,7 @@
 
 int Jucator::total_jucatori_ = 0;
 
-// ==================== Jucator (baza) ====================
+//  Jucator (baza) 
 
 Jucator::Jucator(std::string nume) : nume_(std::move(nume)) {
     ++total_jucatori_;
@@ -78,7 +78,7 @@ std::ostream& operator<<(std::ostream& os, const Jucator& j) {
     return os;
 }
 
-// ==================== JucatorUman ====================
+//  JucatorUman 
 
 JucatorUman::JucatorUman(const std::string& nume) : Jucator(nume) {}
 
@@ -139,7 +139,7 @@ std::unique_ptr<Carte> JucatorUman::alege_carte_taiere(const Carte& referinta) {
     return carte;
 }
 
-// ==================== JucatorAI ====================
+//  JucatorAI 
 
 JucatorAI::JucatorAI(const std::string& nume) : Jucator(nume) {}
 

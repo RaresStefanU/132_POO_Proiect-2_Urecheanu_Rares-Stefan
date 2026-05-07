@@ -1,6 +1,6 @@
 # Șeptică — Proiect POO (C++17)
 
-Implementare în consolă a jocului de cărți **Șeptică** pentru 2 jucători, realizat ca proiect pentru materia Programare Orientată pe Obiecte (FMI).
+Implementare în consolă a jocului de cărți **Șeptică** pentru 2 jucători, realizat ca proiect pentru materia Programare Orientată pe Obiecte.
 
 ---
 

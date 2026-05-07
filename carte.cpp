@@ -4,7 +4,7 @@
 
 int Carte::total_instante_ = 0;
 
-// ----------- Carte (baza) -----------
+//  Carte (baza) 
 
 Carte::Carte(int val, std::string col)
     : valoare_(val), culoare_(std::move(col))
@@ -17,7 +17,7 @@ std::ostream& operator<<(std::ostream& os, const Carte& c) {
     return os;
 }
 
-// ----------- CarteNormala -----------
+//  CarteNormala 
 
 static std::string numeValoare(int v) {
     switch(v) {
@@ -54,7 +54,7 @@ std::string CarteNormala::descriere() const {
     return numeValoare(valoare_) + " de " + culoare_;
 }
 
-// ----------- CartePunct -----------
+//  CartePunct 
 
 CartePunct::CartePunct(int val, const std::string& col)
     : Carte(val, col)
@@ -75,7 +75,7 @@ std::string CartePunct::descriere() const {
     return numeValoare(valoare_) + " de " + culoare_ + " [PUNCT]";
 }
 
-// ----------- CarteSeptar -----------
+//  CarteSeptar 
 
 CarteSeptar::CarteSeptar(const std::string& col)
     : Carte(7, col) {}

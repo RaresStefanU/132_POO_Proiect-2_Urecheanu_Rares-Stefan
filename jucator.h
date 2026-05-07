@@ -8,8 +8,8 @@
 // -------------------------------------------------------
 // Ierarhie de jucatori:
 //   Jucator (abstracta)
-//     |- JucatorUman   — citeste decizia de la stdin
-//     |- JucatorAI     — decide automat dupa strategie
+//      JucatorUman   — citeste decizia de la stdin
+//      JucatorAI     — decide automat dupa strategie
 // -------------------------------------------------------
 
 class Jucator {
@@ -59,7 +59,7 @@ private:
     static int total_jucatori_;
 };
 
-// ------ JucatorUman ------
+//  JucatorUman 
 class JucatorUman : public Jucator {
 public:
     explicit JucatorUman(const std::string& nume);
@@ -77,7 +77,7 @@ private:
     int  citeste_index(int min, int max) const;
 };
 
-// ------ JucatorAI ------
+//  JucatorAI 
 class JucatorAI : public Jucator {
 public:
     explicit JucatorAI(const std::string& nume);

@@ -14,9 +14,9 @@ void afiseaza_tip_jucator(const Jucator& j) {
 }
 
 int main() {
-    std::cout << "==============================\n";
+    std::cout << "\n";
     std::cout << "   Bine ai venit la Septica!  \n";
-    std::cout << "==============================\n\n";
+    std::cout << "\n\n";
 
     std::cout << "Alege modul de joc:\n";
     std::cout << "  [1] Jucator vs AI\n";

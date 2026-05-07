@@ -3,14 +3,6 @@
 #include <memory>
 #include <ostream>
 
-// -------------------------------------------------------
-// Ierarhie de carti:
-//   Carte (abstracta)
-//     |- CarteNormala  (8, 9, J, Q, K)
-//     |- CartePunct    (10, A)   — valoreaza 1 punct
-//     |- CarteSeptar   (7)       — taie orice
-// -------------------------------------------------------
-
 class Carte {
 public:
     // Constructor virtual (clonare polimorfica)

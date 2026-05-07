@@ -50,7 +50,7 @@ int Joc::joaca_mana(int idx_lider) {
     std::cout << jucatori_[1]->nume() << " (lider: " << (idx_lider==1?"da":"nu") << ")\n";
     afiseaza_stoc();
 
-    // ------ Liderul joaca prima carte ------
+    //  Liderul joaca prima carte 
     int idx_secundar = 1 - idx_lider;
     auto prima_carte = jucatori_[idx_lider]->alege_carte_lider();
     const Carte* referinta = prima_carte.get();
@@ -62,7 +62,7 @@ int Joc::joaca_mana(int idx_lider) {
     int idx_curent    = idx_secundar;
     int idx_ultim_taiator = idx_lider;
 
-    // ------ Bucla de taietur ------
+    //  Bucla de taietur 
     while (true) {
         auto taiere = jucatori_[idx_curent]->alege_carte_taiere(*referinta);
 
@@ -91,7 +91,7 @@ int Joc::joaca_mana(int idx_lider) {
         idx_curent = 1 - idx_curent;
     }
 
-    // ------ Castigatorul preia cartile ------
+    //  Castigatorul preia cartile 
     std::cout << "\n" << jucatori_[idx_ultim_taiator]->nume()
               << " castiga " << masa.size() << " carti!\n";
 
@@ -110,9 +110,9 @@ int Joc::joaca_mana(int idx_lider) {
 }
 
 void Joc::ruleaza() {
-    std::cout << "╔══════════════════════════╗\n";
-    std::cout << "║      JOC: SEPTICA        ║\n";
-    std::cout << "╚══════════════════════════╝\n";
+    std::cout << "\n";
+    std::cout << "      JOC: SEPTICA        \n";
+    std::cout << "\n";
     std::cout << "Jucatori: " << jucatori_[0]->nume()
               << " vs " << jucatori_[1]->nume() << "\n";
     std::cout << "Total carti instante create: " << Carte::totalInstante() << "\n\n";
@@ -136,9 +136,9 @@ void Joc::ruleaza() {
 
     // ------ Evaluare finala ------
     stare_ = StareJoc::Terminat;
-    std::cout << "\n╔══════════════════════════╗\n";
-    std::cout << "║     REZULTAT FINAL       ║\n";
-    std::cout << "╚══════════════════════════╝\n";
+    std::cout << "\n\n";
+    std::cout << "     REZULTAT FINAL       \n";
+    std::cout << "\n";
     afiseaza_scor();
 
     int p0 = jucatori_[0]->puncte_castigate();
